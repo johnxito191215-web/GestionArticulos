@@ -47,4 +47,3 @@ while($fila = $resultado->fetch_assoc()){
 
 </body>
 </html>
-
