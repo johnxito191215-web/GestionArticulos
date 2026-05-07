@@ -1,0 +1,49 @@
+<?php include("conexion.php"); ?>
+
+<?php
+if($_POST){
+
+    $nombre = $_POST['nombre'];
+    $marca = $_POST['marca'];
+    $cantidad = $_POST['cantidad'];
+    $bodega = $_POST['bodega'];
+
+    $sql = "INSERT INTO articulos(nombre, marca, cantidad, bodega)
+            VALUES('$nombre','$marca','$cantidad','$bodega')";
+
+    $conn->query($sql);
+
+    header("Location: index.php");
+}
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crear Artículo</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<h2>Crear Artículo</h2>
+
+<form method="POST">
+
+    <label>Nombre:</label>
+    <input type="text" name="nombre" required>
+
+    <label>Marca:</label>
+    <input type="text" name="marca" required>
+
+    <label>Cantidad:</label>
+    <input type="number" name="cantidad" required>
+
+    <label>Bodega:</label>
+    <input type="text" name="bodega" required>
+
+    <button type="submit">Guardar</button>
+
+</form>
+
+</body>
+</html>
