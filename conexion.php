@@ -1,7 +1,7 @@
 <?php
 $host = "mysql-johnxito.alwaysdata.net";
 $usuario = "johnxito";
-$password = "jal1234";
+$password = "clase1234";
 $bd = "johnxito_gestion_articulos";
 
 $conn = new mysqli($host, $usuario, $password, $bd);
